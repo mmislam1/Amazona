@@ -21,7 +21,7 @@ const CartScreen = (props) => {
     //Something is necessary to do
   }
   const checkoutHandler = () => {
-    props.history.push('signin?redirect=shipping')
+    props.history.push('/signin?redirect=shipping')
   }
   return (
     <div className='row top'>
