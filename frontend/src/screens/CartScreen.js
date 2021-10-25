@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { addToCart } from '../actions/cartActions'
-import { listProducts } from '../actions/productActions'
+import { addToCart, removeFromCart } from '../actions/cartActions'
 import MessageBox from '../components/MessageBox'
 const CartScreen = (props) => {
   const productId = props.match.params.id
@@ -19,6 +18,7 @@ const CartScreen = (props) => {
   }, [dispatch, productId, qty])
   const removeFromCartHandler = (id) => {
     //Something is necessary to do
+    dispatch(removeFromCart(id))
   }
   const checkoutHandler = () => {
     props.history.push('/signin?redirect=shipping')
@@ -93,7 +93,7 @@ const CartScreen = (props) => {
                 type='button'
                 onClick={checkoutHandler}
                 className='primary block'
-                disabled={cart.length === 0}
+                disabled={cartItems.length === 0}
               >
                 Proceed to Checkout{' '}
               </button>
