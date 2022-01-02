@@ -6,6 +6,7 @@ import {
   productDetailsReducer,
   productListReducer,
 } from './reducers/productReducers'
+import { userSigninReducer } from './reducers/userReducer'
 const initialState = {
   cart: {
     cartItems: localStorage.getItem('cartItems')
@@ -17,6 +18,7 @@ const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
   cart: cartReducer,
+  userSignin: userSigninReducer,
 })
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(
