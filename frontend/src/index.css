@@ -92,7 +92,7 @@ button.block {
   width: 100%;
 }
 button:hover {
-  border: 0.1rem #404040 solid;
+  border: 0.1rem #888888 solid;
 }
 /*Header*/
 header a {
@@ -155,13 +155,13 @@ img.large {
   width: 100%;
 }
 .card {
-  border: 0.1rem;
-  background-color: #f8f8f8;
+  border: 0.1rem solid rgb(180, 180, 180);
+  background-color: #fff7f7;
   border-radius: 0.5rem;
   margin: 1rem;
 }
 .card-body {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .card-body > * {
@@ -212,15 +212,14 @@ img.large {
   margin: 0 auto;
 }
 
-form > div {
+.form > div {
   display: flex;
   flex-direction: column;
   margin: 1rem;
 }
 
-form > label {
+.form label {
   margin: 1rem 0;
-  display: block;
 }
 
 /* DROPDOWN */
