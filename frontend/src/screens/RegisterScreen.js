@@ -29,7 +29,6 @@ export default function RegisterScreen(props) {
   }
   useEffect(() => {
     if (userInfo) {
-      //console.log('/n/n/n XXXXXX/n/n/n/n')
       props.history.push(redirect)
     }
   }, [props.history, userInfo, redirect])
